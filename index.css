@@ -1,0 +1,18 @@
+h1
+{
+	color: yellowgreen;
+	font-style: italic;
+}
+form
+{
+	border: 5px solid limegreen;
+}
+option
+{
+	color: darkorange;
+}
+input
+{
+	color: royalblue;
+	font-style: oblique;
+}

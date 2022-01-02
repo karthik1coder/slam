@@ -1,0 +1,106 @@
+<html>
+
+<head>
+
+	<title>
+<%= title %>
+	</title>
+
+
+	<link href="/css/home.css" rel="stylesheet">
+	</head>
+
+<body>
+<h1>Hello</h1>
+
+<ul>
+<% for(let i=0; i<5; i++){ %>
+		
+
+		<li>
+			<%= i %>
+
+
+		</li> 
+	<% } %>
+
+
+</ul>
+
+<ul>
+	<% for(let f=0; f<friends_list.length; f++){ %>
+		<li>
+			<div style="border:2px solid grey">
+
+			<%=friends_list[f].name %><br>
+             <%=friends_list[f].birthdate %><br>
+             <%=friends_list[f].address %><br>
+             <%=friends_list[f].Email %><br>
+             <%=friends_list[f].zodiac %><br>
+             <a href="/delete_db/?id=<%= friends_list[f]._id %>">
+             	x
+             </a>
+
+</div>
+
+
+		</li>
+		<%} %>
+
+</ul>
+
+<div>
+	<form action="/adding" method="POST">
+
+		<label for="name">name:</label><br>
+		<input type="text" id="name" name="name"><br>
+<label for="birthdate">date of birth:</label><br>
+<input type="date" id="birthdate" name="birthdate" required><br>
+
+<label for="address">Adress:</label><br>
+<input type="address" id="address" name="address" required><br>
+
+
+<label for="Email">Email:</label><br>
+<input type="email" id="Email" name="Email" required><br>
+
+<label for="zodiac">Enter zodiac sign</label><br>
+<select id="zodiac" name="zodiac">
+
+	<optgroup label="zodiac">
+		<option value="Aries">Aries</option>
+		<option value="Taurus">Taurus</option>
+		<option value="Gemini">Gemini</option>
+		<option value="Cancer">Cancer</option>
+		<option value="Leo">Leo</option>
+<option value="Virgo">Virgo</option>
+		<option value="Libra">Libra</option>
+<option value="scorpio">scorpio</option>
+		<option value="Sagittarius">Sagittarius</option>
+		<option value="Capricorn">Capricorn</option>
+		<option value="Aquarius">Aquarius</option>
+<option value="Pisces">Pisces</option>
+		<option value="Ophiuchus">Ophiuchus</option>
+
+		
+
+	</optgroup>
+
+</select>
+
+<label for="hobbies"> Your hobbies:</label><br>
+<textarea rows="10" coloumns="30"></textarea>
+
+<label for="movie"> Favourite movie:</label><br>
+<textarea rows="10" coloumns="30"></textarea>
+
+<label for="food">Favourite dish:</label><br>
+<textarea rows="10" coloumns="30"></textarea>
+
+<button type="submit">click</button>
+
+	</form>
+</div>
+
+</body>
+</html>
